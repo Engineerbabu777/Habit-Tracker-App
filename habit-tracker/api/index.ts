@@ -1,11 +1,12 @@
 import express , {Request, Response} from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-
+import * as dotenv from 'dotenv'
 const app = express();
 const port = 3000;
 import cors from 'cors';
 
+dotenv.config();
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
